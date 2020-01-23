@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <style>
+    	#options {
+    		font-family: monospace;
+    		text-align: center;
+    		border: 0px solid white;
+			border-radius: 2px;
+    	}
+    	.center {
+    		text-align: center;
+    	}
+    	.pic {
+    		/*width: 300;*/
+    		box-sizing: border-box;
+    		height: auto;
+    		outline: 0px solid green;
+    		outline-width: 0px;
+    		outline-offset: 1px;
+    		margin-bottom: 5px;
+    	}
+    	.selected {
+    		outline-width: 2px;	
+    	}
+    	#pics {
+    		width: 100%;
+    		border: 0px solid white;
+    		border-radius: 3px;
+    	}
+
+		input[type=number]{
+			width: 70px;
+			height: 30px;
+		}
+
+    	body {
+    		color: white;
+    		background-color: black;
+    	}
+    </style>
+</head>
+
+<body>
+	<div id="options">
+		Options
+		<br><br>Number of Images: <input class="center" id="numimages" type="text" size=6 value="100"> <span id='totalfilecount'></span>
+		Image Width: <input class="center" id="imagewidth" type="text" size=6 value="250">
+		Number of Images Per Row: <input class="center" id="perrow" type="number" size=3 value="5">
+		Auto Resizing: <input type="checkbox" id="autoresize">
+        <br>
+        Start With Selected: <input type="checkbox" id="startselected">
+		Include Static Images: <input type="checkbox" id="staticimages">
+        Random Image Order: <input type="checkbox" id="randomorder">
+		Reverse Selected Order: <input type="checkbox" id="reverseOrder">
+        <br>
+        No Videos: <input type="checkbox" id="novideos">
+        Videos Only: <input type="checkbox" id="videosonly">
+        Mute Videos: <input type="checkbox" id="mutevideos">
+        Play Videos: <input type="checkbox" id="playvideos">
+        Video Volume: 0% <input type="range" id="videovolume" step=".001" min="0" max=".1"> 10%
+		<br><br>Type: <select id="type">
+
+        </select>
+		<button id="regen">Regen</button>
+		<button id="savesettings">Save Settings</button>
+		<button id="clearselected">Clear Selected</button>
+		<button id="saveselected">Save Selected</button>
+		<button id="loadselected">Load Selected</button>
+	</div>
+    <br><div id="pics"></div>
+    <script language="javascript" src="viewpics.js"></script>
+</body>
+
+</html>

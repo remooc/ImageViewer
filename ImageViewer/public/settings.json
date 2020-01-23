@@ -1,0 +1,14 @@
+{
+  "startNumImages": "800",
+  "startType": "Asian",
+  "startNumPerRow": "6",
+  "includeStatic": true,
+  "randomImageChoice": true,
+  "videosOnly": false,
+  "noVideos": true,
+  "muteVideos": false,
+  "videoVolume": "0",
+  "startSelected": true,
+  "autoResize": true,
+  "reverseSelected": false
+}
